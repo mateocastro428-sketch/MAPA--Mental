@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>Un proyecto es un <strong>esfuerzo temporal</strong> que se lleva a cabo para crear un producto, servicio o resultado único.</p>
         <p>Características principales:</p>
         <ul>
-          <li>Tienen un inicio y un fin definidos, no son infinitos[cite: 56].</li>
-          <li>Responden a una necesidad específica y generan un resultado único[cite: 57].</li>
+          <li>Tienen un inicio y un fin definidos, no son infinitos.</li>
+          <li>Responden a una necesidad específica y generan un resultado único.</li>
           <li>Consumen recursos y deben equilibrar restricciones de tiempo, costo, alcance, riesgos y calidad.</li>
         </ul>
       `
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Gestión de Proyectos",
       body: `
         <p>Es el conjunto de <strong>actividades coordinadas para dirigir y controlar</strong> el cumplimiento de los objetivos del proyecto.</p>
-        <p>Abarca todo el ciclo de vida, desde la identificación del problema hasta la evaluación final[cite: 135]. Se diferencia de la "administración" o "gerencia", que se enfoca principalmente en la fase de ejecución[cite: 140].</p>
+        <p>Abarca todo el ciclo de vida, desde la identificación del problema hasta la evaluación final. Se diferencia de la "administración" o "gerencia", que se enfoca principalmente en la fase de ejecución.</p>
         <p>Implica equilibrar las restricciones de tiempo, costos, alcance, recursos, riesgos y calidad.</p>
       `
     },
@@ -228,4 +228,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("zoomFit").onclick = fitToWindow;
 
   layout();
+
 });
