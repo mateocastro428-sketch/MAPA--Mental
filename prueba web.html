@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa Mental Interactivo — Proyectos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bar">
+    <h1>Mapa Mental: Formulación y Evaluación de Proyectos</h1>
+    <div class="controls">
+      <button class="btn zoom-btn" id="zoomIn" title="Acercar">＋</button>
+      <button class="btn zoom-btn" id="zoomOut" title="Alejar">－</button>
+      <button class="btn fit-btn" id="zoomFit" title="Ajustar">⤢</button>
+    </div>
+  </div>
+  
+  <div class="wrap">
+    <div class="viewport" id="viewport">
+      <div class="mind" id="mind">
+        <svg class="lines" id="lines"></svg>
+        
+        <div class="node central" data-id="central">
+          <h3>PROYECTOS</h3>
+          <p>Esfuerzo temporal para crear un resultado único</p>
+        </div>
+        
+        <div class="node definition" data-id="definicion">
+          <h4>Definición</h4>
+          <p>PMBOK & ISO 21500</p>
+        </div>
+        
+        <div class="node management" data-id="gestion">
+          <h4>Gestión</h4>
+          <p>Ciclo de vida completo</p>
+        </div>
+
+        <div class="node investment" data-id="inv">
+          <h4>Inversión</h4>
+          <p>Beneficios económicos</p>
+        </div>
+        
+        <div class="node social" data-id="soc">
+          <h4>Sociales</h4>
+          <p>Calidad de vida</p>
+        </div>
+        
+        <div class="node research" data-id="id">
+          <h4>I+D+i</h4>
+          <p>Conocimiento e innovación</p>
+        </div>
+        
+        <div class="node technology" data-id="ti">
+          <h4>TI</h4>
+          <p>Tecnología de información</p>
+        </div>
+        
+        <div class="node small investment-sub" data-id="inv-car">
+          <span>Características</span>
+        </div>
+        <div class="node small investment-sub" data-id="inv-ej">
+          <span>Ejemplos</span>
+        </div>
+        
+        <div class="node small social-sub" data-id="soc-car">
+          <span>Características</span>
+        </div>
+        <div class="node small social-sub" data-id="soc-ej">
+          <span>Ejemplos</span>
+        </div>
+        
+        <div class="node small research-sub" data-id="id-car">
+          <span>Características</span>
+        </div>
+        <div class="node small research-sub" data-id="id-ej">
+          <span>Ejemplos</span>
+        </div>
+        
+        <div class="node small technology-sub" data-id="ti-car">
+          <span>Características</span>
+        </div>
+        <div class="node small technology-sub" data-id="ti-ej">
+          <span>Ejemplos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <dialog id="modal">
+    <div class="modal-header">
+      <h2 id="mTitle"></h2>
+      <button class="close-btn">×</button>
+    </div>
+    <div class="modal-content">
+      <div id="mBody"></div>
+    </div>
+  </dialog>
+  
+  <script src="script.js"></script>
+</body>
+</html>
