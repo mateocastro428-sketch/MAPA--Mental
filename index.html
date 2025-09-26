@@ -3,121 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Árbol de Problemas - Energía Eólica Offshore</title>
+    <title>Series de Anualidades vs Series Variables - Carlos Mateo Castro</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f8f9fa;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            line-height: 1.6;
+            color: #2c3e50;
+            overflow-x: hidden;
         }
-        .problem-tree-container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
         }
-        h1 {
-            color: #007bff;
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #6c757d;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .problem-box, .effect-box, .cause-box {
-            background: #e9ecef;
-            border: 2px solid #ced4da;
-            padding: 15px;
-            margin: 10px auto;
-            border-radius: 8px;
-            max-width: 80%;
-        }
-        .problem-box {
-            background-color: #ffc107;
-            color: #333;
-            border-color: #ffc107;
-            font-weight: bold;
-            font-size: 1.1em;
-            position: relative;
-        }
-        .problem-box:after {
-            content: '';
+
+        .floating-shapes {
             position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border-left: 2px solid #6c757d;
-            height: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
         }
-        .effects-section, .causes-section {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .effect-box, .cause-box {
-            background-color: #d1ecf1;
-            border-color: #bee5eb;
-            flex: 1;
-            min-height: 80px;
-            position: relative;
-        }
-        .effect-box {
-            background-color: #f8d7da;
-            border-color: #f5c6cb;
-        }
-        .effects-section .effect-box:before {
-            content: '';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border-left: 2px solid #6c757d;
-            height: 20px;
-        }
-    </style>
-</head>
-<body>
 
-<div class="problem-tree-container">
-    <h1>Árbol de Problemas</h1>
-    <h2>Energía Eólica Offshore en Colombia</h2>
-
-    <div class="effects-section">
-        <div class="effect-box">
-            <p><strong>Efecto 1:</strong> Dificultad para diversificar la matriz energética y cumplir metas de transición.</p>
-        </div>
-        <div class="effect-box">
-            <p><strong>Efecto 2:</strong> Colombia no aprovecha su enorme potencial en energías renovables.</p>
-        </div>
-        <div class="effect-box">
-            <p><strong>Efecto 3:</strong> Pérdida de oportunidades de inversión y desarrollo económico en el sector.</p>
-        </div>
-    </div>
-
-    <div class="problem-box">
-        <p><strong>PROBLEMA CENTRAL:</strong> Falta de un marco jurídico y regulatorio claro para el desarrollo de la energía eólica marina en Colombia.</p>
-    </div>
-
-    <div class="causes-section">
-        <div class="cause-box">
-            <p><strong>Causa 1:</strong> Falta de claridad en el proceso de asignación de licencias y permisos.</p>
-        </div>
-        <div class="cause-box">
-            <p><strong>Causa 2:</strong> Inexistencia de lineamientos para la conexión de proyectos a la red eléctrica nacional.</p>
-        </div>
-        <div class="cause-box">
-            <p><strong>Causa 3:</strong> Inseguridad y falta de incentivos para los inversionistas privados.</p>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
-
+        .floating-shapes:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .floating-shapes:nth-child(2) { top: 60%; left: 80%; animation-delay: 2s; }
+        .floating-shapes:nth-child(3) { top: 40%; left: 60%; animation-delay: 4s; }
