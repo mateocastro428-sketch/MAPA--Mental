@@ -4,43 +4,307 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Series de Anualidades vs Series Variables - Carlos Mateo Castro</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes"></div>
+        <div class="floating-shapes"></div>
+        <div class="floating-shapes"></div>
+    </div>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            line-height: 1.6;
-            color: #2c3e50;
-            overflow-x: hidden;
-        }
+    <div class="container">
+        <!-- Header with Author Info -->
+        <div class="header">
+            <div class="author-info">
+                <div class="avatar">CM</div>
+                <div class="author-details">
+                    <h3>Carlos Mateo Castro</h3>
+                    <p>Codigo: 67001547</p>
+                </div>
+            </div>
+            <h1>📊 Series de Anualidades vs Series Variables 💰</h1>
+            <p>🏢 Análisis comparativo para cálculo de valor presente y futuro en contextos empresariales, proyectuales y personales</p>
+        </div>
 
-        /* Animated Background */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.1;
-        }
+        <!-- Visual Comparison Grid -->
+        <div class="comparison-grid">
+            <!-- Series de Anualidades Card -->
+            <div class="visual-card anualidades">
+                <div class="card-header">
+                    <div class="icon icon-blue">📈</div>
+                    <div class="card-title">Series de Anualidades</div>
+                </div>
+                
+                <div class="definition-box">
+                    <h3>💡 Definición</h3>
+                    <p>Las series uniformes o anualidades son <strong>flujos de efectivo constantes</strong> que se producen a intervalos regulares durante un período determinado.</p>
+                </div>
 
-        .floating-shapes {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            animation: float 6s ease-in-out infinite;
-        }
+                <h4 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">🔢 Tipos Principales:</h4>
+                <div class="types-grid">
+                    <div class="type-item" data-icon="⏰">
+                        <strong>Anualidad Ordinaria:</strong><br>Pagos al final del período
+                    </div>
+                    <div class="type-item" data-icon="🚀">
+                        <strong>Anualidad Anticipada:</strong><br>Pagos al inicio del período
+                    </div>
+                    <div class="type-item" data-icon="♾️">
+                        <strong>Anualidad Perpetua:</strong><br>Pagos infinitos
+                    </div>
+                    <div class="type-item" data-icon="⏳">
+                        <strong>Anualidad Diferida:</strong><br>Pagos tras período de espera
+                    </div>
+                </div>
 
-        .floating-shapes:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .floating-shapes:nth-child(2) { top: 60%; left: 80%; animation-delay: 2s; }
-        .floating-shapes:nth-child(3) { top: 40%; left: 60%; animation-delay: 4s; }
+                <div class="pros-cons-visual">
+                    <div class="pros-visual">
+                        <h4>✅ Ventajas</h4>
+                        <ul>
+                            <li>Predictibilidad en pagos</li>
+                            <li>Fácil cálculo y planificación</li>
+                            <li>Estabilidad financiera</li>
+                            <li>Amplia aplicación práctica</li>
+                            <li>Menor complejidad matemática</li>
+                        </ul>
+                    </div>
+                    <div class="cons-visual">
+                        <h4>⚠️ Desventajas</h4>
+                        <ul>
+                            <li>No considera inflación</li>
+                            <li>Rigidez en cambios</li>
+                            <li>Pérdida de poder adquisitivo</li>
+                            <li>No refleja crecimiento real</li>
+                            <li>Limitada adaptabilidad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <strong>📊 Fórmula VP:</strong><br>
+                    PV = P × [(1-(1+i)^-n)/i]
+                </div>
+            </div>
+
+            <!-- Series Variables Card -->
+            <div class="visual-card variables">
+                <div class="card-header">
+                    <div class="icon icon-red">📊</div>
+                    <div class="card-title">Series Variables</div>
+                </div>
+                
+                <div class="definition-box">
+                    <h3>🔄 Definición</h3>
+                    <p>Secuencias de pagos o ingresos donde las <strong>cantidades cambian</strong> de un período a otro, siguiendo patrones aritméticos, geométricos o irregulares.</p>
+                </div>
+
+                <h4 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">📈 Tipos Principales:</h4>
+                <div class="types-grid">
+                    <div class="type-item" data-icon="➕">
+                        <strong>Series Aritméticas:</strong><br>Aumento/disminución fijo por período
+                    </div>
+                    <div class="type-item" data-icon="📊">
+                        <strong>Series Geométricas:</strong><br>Cambio porcentual constante
+                    </div>
+                    <div class="type-item" data-icon="🔀">
+                        <strong>Series Irregulares:</strong><br>Cambios sin patrón definido
+                    </div>
+                    <div class="type-item" data-icon="🌊">
+                        <strong>Perpetuidad Variable:</strong><br>Cambios infinitos con patrón
+                    </div>
+                </div>
+
+                <div class="pros-cons-visual">
+                    <div class="pros-visual">
+                        <h4>✅ Ventajas</h4>
+                        <ul>
+                            <li>Considera inflación y crecimiento</li>
+                            <li>Mayor realismo económico</li>
+                            <li>Flexibilidad de adaptación</li>
+                            <li>Refleja condiciones reales</li>
+                            <li>Mejor para proyecciones largas</li>
+                        </ul>
+                    </div>
+                    <div class="cons-visual">
+                        <h4>⚠️ Desventajas</h4>
+                        <ul>
+                            <li>Mayor complejidad matemática</li>
+                            <li>Dificultad en planificación</li>
+                            <li>Incertidumbre en proyecciones</li>
+                            <li>Requiere más datos</li>
+                            <li>Cálculos más complejos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <strong>📊 Fórmula Serie Geométrica:</strong><br>
+                    VP = A × [1-((1+g)/(1+i))^n] / (i-g)
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Comparison Table -->
+        <div class="table-visual">
+            <div class="table-title">🔄 Tabla Comparativa Detallada</div>
+            
+            <table class="visual-table">
+                <thead>
+                    <tr>
+                        <th>🎯 Criterio</th>
+                        <th>📈 Series de Anualidades</th>
+                        <th>📊 Series Variables</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>💰 Naturaleza de Pagos</strong></td>
+                        <td>Constantes e iguales</td>
+                        <td>Variables según patrón</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🧮 Complejidad Matemática</strong></td>
+                        <td>Baja - Fórmulas simples</td>
+                        <td>Alta - Fórmulas complejas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🏢 Aplicación Práctica</strong></td>
+                        <td>Préstamos, hipotecas, pensiones</td>
+                        <td>Proyecciones con crecimiento, inflación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>💡 Realismo Económico</strong></td>
+                        <td>Limitado</td>
+                        <td>Alto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>⚡ Facilidad de Uso</strong></td>
+                        <td>Alta</td>
+                        <td>Media-Baja</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Visual Examples Section -->
+        <div class="examples-visual">
+            <div class="examples-title">💼 Ejemplos Prácticos por Contexto</div>
+            
+            <div class="context-grid">
+                <!-- Contexto Empresarial -->
+                <div class="context-visual">
+                    <div class="context-icon">🏢</div>
+                    <h3>Contexto Empresarial</h3>
+                    
+                    <div class="example-visual">
+                        <strong>📈 Anualidades:</strong>
+                        <p>• Pagos de arrendamiento fijo: $2,000 mensuales por 5 años</p>
+                        <p>• Financiamiento de equipos con cuotas fijas</p>
+                        <p>• Bonos corporativos con cupones constantes</p>
+                        <div class="chart-container">VP = $2,000 × [(1-(1.005)^-60)/0.005] = $103,680</div>
+                    </div>
+                    
+                    <div class="example-visual">
+                        <strong>📊 Series Variables:</strong>
+                        <p>• Presupuestos con inflación del 3% anual</p>
+                        <p>• Ingresos por ventas con crecimiento del 5% anual</p>
+                        <p>• Costos operativos incrementales</p>
+                        <div class="chart-container">VP = A/i × [1 - ((1+g)/(1+i))^n]</div>
+                    </div>
+                </div>
+
+                <!-- Contexto Proyectual -->
+                <div class="context-visual">
+                    <div class="context-icon">🚧</div>
+                    <h3>Contexto Proyectual</h3>
+                    
+                    <div class="example-visual">
+                        <strong>📈 Anualidades:</strong>
+                        <p>• Flujos de caja constantes: $50,000 anuales</p>
+                        <p>• Depreciación lineal de activos</p>
+                        <p>• Costos de mantenimiento fijos</p>
+                        <div class="chart-container">VPN = -Inversión + VP(Flujos constantes)</div>
+                    </div>
+                    
+                    <div class="example-visual">
+                        <strong>📊 Series Variables:</strong>
+                        <p>• Flujos crecientes: Año 1: $30K, Año 2: $35K, Año 3: $40K</p>
+                        <p>• Proyectos con ciclo de vida variable</p>
+                        <p>• Ingresos escalados por inflación</p>
+                        <div class="chart-container">VPN = -Inversión + Σ(Flujo_t/(1+r)^t)</div>
+                    </div>
+                </div>
+
+                <!-- Contexto Personal -->
+                <div class="context-visual">
+                    <div class="context-icon">👤</div>
+                    <h3>Contexto Personal</h3>
+                    
+                    <div class="example-visual">
+                        <strong>📈 Anualidades:</strong>
+                        <p>• Ahorro para jubilación: $500 mensuales</p>
+                        <p>• Pago de hipoteca: $1,200 mensuales</p>
+                        <p>• Prima de seguro constante</p>
+                        <div class="chart-container">VF = $500 × [((1.005)^360-1)/0.005] = $602,257</div>
+                    </div>
+                    
+                    <div class="example-visual">
+                        <strong>📊 Series Variables:</strong>
+                        <p>• Ahorros con incremento salarial del 4% anual</p>
+                        <p>• Gastos familiares crecientes con inflación</p>
+                        <p>• Inversiones con aportes variables</p>
+                        <div class="chart-container">Considerando crecimiento y tasa de descuento</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Key Points -->
+        <div class="examples-visual">
+            <div class="examples-title">🎯 Puntos Clave para la Decisión</div>
+            
+            <div class="key-points-visual">
+                <div class="key-point-visual" data-emoji="✅">
+                    <strong>📈 Usar Anualidades cuando:</strong><br>
+                    Se requiere simplicidad, predictibilidad y estabilidad en pagos (préstamos, seguros, pensiones básicas)
+                </div>
+                
+                <div class="key-point-visual" data-emoji="📊">
+                    <strong>📊 Usar Series Variables cuando:</strong><br>
+                    Se necesita considerar inflación, crecimiento económico o cambios en condiciones de mercado (proyecciones empresariales, planificación a largo plazo)
+                </div>
+                
+                <div class="key-point-visual" data-emoji="💡">
+                    <strong>🔍 Consideración Importante:</strong><br>
+                    Las series variables proporcionan mayor realismo pero requieren mayor análisis y datos más precisos
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Footer -->
+        <div class="footer-visual">
+            <div class="conclusion-icon">🎓</div>
+            <h3>📚 Conclusión</h3>
+            <p>La elección entre series de anualidades y series variables depende del contexto específico, la disponibilidad de información y la precisión requerida en la proyección financiera. Ambas herramientas son fundamentales en las matemáticas financieras y su aplicación correcta permite tomar decisiones informadas en diferentes escenarios empresariales, proyectuales y personales.</p>
+            
+            <div class="references-visual">
+                <h3>📖 Referencias (Normas APA)</h3>
+                <p>Brigham, E. & Ehrhardt, M. (2016). <em>Finanzas corporativas</em>. Cengage Learning.</p>
+                <p>Ross, S., Westerfield, R. & Jordan, B. (2019). <em>Fundamentals of corporate finance</em>. McGraw-Hill Education.</p>
+                <p>Sosa Gómez, R. E. (2023). <em>Manual de ingeniería económica</em>. Universidad Sergio Arboleda.</p>
+                <p>Alvarado Verdín, V. M. (2015). <em>Ingeniería económica: nuevo enfoque</em>. Grupo Editorial Patria.</p>
+                <p>Pabón Miranda, P. P. (2023). <em>Matemáticas financieras con Excel, normas colombianas y NIIF</em>. Editorial Unimagdalena.</p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center; font-weight: bold; color: #667eea;">
+                <p>📝 Elaborado por: Carlos Mateo Castro - ID: 67001547</p>
+                <p>🏫 Universidad Católica de Colombia - Finanzas Corporativas</p>
+                <p>📅 Unidad 4 - Matemáticas Financieras - Series</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
